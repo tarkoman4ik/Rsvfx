@@ -646,7 +646,7 @@ PrefabInstance:
     - target: {fileID: 1528475295553199703, guid: c82362958e30b982d9e203a51a75abeb,
         type: 3}
       propertyPath: _brightness
-      value: 0.32
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1528475295553199703, guid: c82362958e30b982d9e203a51a75abeb,
         type: 3}
@@ -656,7 +656,7 @@ PrefabInstance:
     - target: {fileID: 1528475295553199703, guid: c82362958e30b982d9e203a51a75abeb,
         type: 3}
       propertyPath: _depthThreshold
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1528475295553199707, guid: c82362958e30b982d9e203a51a75abeb,
         type: 3}

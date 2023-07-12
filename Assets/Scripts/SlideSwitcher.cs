@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class SlideSwitcher : MonoBehaviour
 {
-    public float time = 10.0f,duration=1.0f;
+    public float time = 10.0f,duration=1.0f,timeLeft=30.0f;
+    public bool NextSceneUpdate = false;
     private void Start()
     {
         DOTween.Sequence()
@@ -14,5 +16,24 @@ public class SlideSwitcher : MonoBehaviour
             .AppendInterval(time)
             .Append(transform.DOMove(endValue: new Vector3(x: 0, y: 0.77f, z: 0), duration: duration))
             .SetLoops(-1);
+    }
+    private void Update()
+    {
+        if (NextSceneUpdate)
+        {
+            NextScene();
+            NextSceneUpdate = false;
+        }
+        timeLeft -= Time.deltaTime;
+        if (timeLeft < 0)
+            NextSceneUpdate = true;
+    }
+    public void NextScene()
+    {
+        var index = SceneManager.GetActiveScene().buildIndex;
+        if (index == 3)
+            SceneManager.LoadScene(0);
+        else
+            SceneManager.LoadScene(index+1);
     }
 }

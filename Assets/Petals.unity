@@ -916,9 +916,19 @@ PrefabInstance:
       objectReference: {fileID: 8400000, guid: e96cdc3b37ad79be39d14ce547fe0da1, type: 2}
     - target: {fileID: 1528475295553199703, guid: c82362958e30b982d9e203a51a75abeb,
         type: 3}
+      propertyPath: _brightness
+      value: 0.426
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528475295553199703, guid: c82362958e30b982d9e203a51a75abeb,
+        type: 3}
       propertyPath: _positionMap
       value: 
       objectReference: {fileID: 8400000, guid: d8e773d5bbad0c05c965e6b888e86b55, type: 2}
+    - target: {fileID: 1528475295553199703, guid: c82362958e30b982d9e203a51a75abeb,
+        type: 3}
+      propertyPath: _depthThreshold
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1528475295553199707, guid: c82362958e30b982d9e203a51a75abeb,
         type: 3}
       propertyPath: m_RootOrder
