@@ -14,7 +14,16 @@ public class SlideSwitcher : MonoBehaviour
             .AppendInterval(time)
             .Append(transform.DOMove(endValue: new Vector3(x: -38, y: 0.77f, z: 0), duration: duration))
             .AppendInterval(time)
-            .Append(transform.DOMove(endValue: new Vector3(x: 0, y: 0.77f, z: 0), duration: duration))
+            .Append(transform.DOMove(endValue: new Vector3(x: -76, y: 0.77f, z: 0), duration: duration))
+            .AppendInterval(time)
+            .Append(transform.DOMove(endValue: new Vector3(x: -114, y: 0.77f, z: 0), duration: duration))
+            .AppendInterval(time)
+            .Append(transform.DOMove(endValue: new Vector3(x: -152, y: 0.77f, z: 0), duration: duration))
+            .AppendInterval(time)
+            .Append(transform.DOMove(endValue: new Vector3(x: -190, y: 0.77f, z: 0), duration: duration))
+            .AppendInterval(time)
+            .Append(transform.DOMove(endValue: new Vector3(x: -228, y: 0.77f, z: 0), duration: duration))
+            .AppendInterval(time)
             .SetLoops(-1);
     }
     private void Update()

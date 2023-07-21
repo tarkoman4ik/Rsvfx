@@ -787,8 +787,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675159357497811403, guid: 407f31c24dd4cf84c8ea13294077aba2,
         type: 3}
+      propertyPath: time
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675159357497811403, guid: 407f31c24dd4cf84c8ea13294077aba2,
+        type: 3}
       propertyPath: timeLeft
-      value: 60
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 7675159357669200809, guid: 407f31c24dd4cf84c8ea13294077aba2,
         type: 3}
