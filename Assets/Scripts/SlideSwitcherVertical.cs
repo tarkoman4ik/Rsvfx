@@ -9,17 +9,21 @@ public class SlideSwitcherVertical : MonoBehaviour
     public float time = 20.0f, duration = 1.0f;
     public GameObject video1, video2,video3;
     private VideoPlayer videoPlayer1, videoPlayer2,videoPlayer3;
+    public float timeVideo = 20.0f;
+    private bool first = false, second = false;
 
     private void Start()
     {
+        videoPlayer1 = video1.GetComponent<VideoPlayer>();
+        videoPlayer1.Pause();
         DOTween.Sequence()
             .AppendInterval(time)
             .Append(transform.DOMoveY(endValue: 36.2f, duration: duration).SetEase(Ease.OutBack))
             .AppendInterval(time)
             .Append(transform.DOMoveY(endValue: 71.2f, duration: duration).SetEase(Ease.OutBack))
             .AppendInterval(time)
-            //.Append(transform.DOMoveY(endValue: 106.2f, duration: duration))
-            //.AppendInterval(time)
+            .Append(transform.DOMoveY(endValue: 106.2f, duration: duration).SetEase(Ease.OutBack))
+            .AppendInterval(time)
             //.Append(transform.DOMoveY(endValue: 141.2f, duration: duration))
             //.AppendInterval(time)
             //.Append(transform.DOMoveY(endValue: 176.2f, duration: duration))
@@ -44,5 +48,21 @@ public class SlideSwitcherVertical : MonoBehaviour
             //.AppendInterval(time)
             .Append(transform.DOMoveY(endValue: 1.2f,duration:duration).SetEase(Ease.OutBack))
             .SetLoops(-1);
+    }
+
+    private void Update()
+    {
+        timeVideo -= Time.deltaTime;
+        if (timeVideo < 0 &&first==false)
+        {
+            timeVideo += 84.0f;
+            first = true;
+            videoPlayer1.Play();
+        }
+        if (timeVideo < 63 && first == true)
+        {
+            first = false;
+            videoPlayer1.Pause();
+        }
     }
 }
