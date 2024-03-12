@@ -15,7 +15,6 @@ public class SlideSwitcher : MonoBehaviour
     public float timeVideo = 64.0f;
     private bool first = false, second = false;
 
-    private VFXParticleSystemInfo vp;
     private void Start()
     {
         videoPlayer1 = video1.GetComponent<VideoPlayer>();
@@ -37,7 +36,7 @@ public class SlideSwitcher : MonoBehaviour
             .Append(transform.DOMove(endValue: new Vector3(x: -228, y: 0.77f, z: 0), duration: duration).SetEase(Ease.OutBack))
             .AppendInterval(time)
             .Append(transform.DOMove(endValue: new Vector3(x: -266, y: 0.77f, z: 0), duration: duration).SetEase(Ease.OutBack))
-            .AppendInterval(11.0f)
+            .AppendInterval(16.0f)
             //.Append(transform.DOMove(endValue: new Vector3(x: -304, y: 0.77f, z: 0), duration: duration).SetEase(Ease.OutBack))
             //.AppendInterval(time)
             //.Append(transform.DOMove(endValue: new Vector3(x: -342, y: 0.77f, z: 0), duration: duration).SetEase(Ease.OutBack))
@@ -64,7 +63,7 @@ public class SlideSwitcher : MonoBehaviour
         {
             videoPlayer2.Play();
             second = false;
-            timeVideo += 75.0f;
+            timeVideo += 80.0f;
         }
         //if (NextSceneUpdate)
         //{
